@@ -1,0 +1,27 @@
+<div>
+  <h1 class="sample-content">New user</h1>
+  <a [routerLink]=" ['./'] ">back to users list</a>
+  <hr>
+
+  <div>
+    <h4>The form:</h4>
+
+    <form (ngSubmit)="updateUser(user)" autocomplete="off">
+
+      <input
+        [value]="user.name"
+        (input)="user.name = $event.target.value"
+        placeholder="Enter user name"
+        autofocus>
+
+      <input
+        [value]="user.email"
+        (input)="user.email = $event.target.value"
+        placeholder="Enter user Email">
+
+      <button>Update user</button>
+    </form>
+
+  </div>
+
+</div>
